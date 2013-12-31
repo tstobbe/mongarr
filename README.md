@@ -33,7 +33,7 @@ Early alpha. Being such a singularly isolatable piece of code though it's being 
 1. Anything you might pass to it from external input.
 2. Anthing the expection of an array when there isn't one (infinte loop). I think it's mostly unlikely, but do a pull request if you find one.
 3. Expecting MongoArr to operate *exactly* as MongoDB would. It's close, but don't expect it to be 100%.
-4. Expecting MongoArr to through an error on invalid sytax. It likely won't. It'll just have undefined results.
+4. Expecting MongoArr to throw an error on invalid sytax. It likely won't. It'll just have undefined results.
 
 NodeJS
 ------
