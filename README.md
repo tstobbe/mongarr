@@ -1,6 +1,6 @@
 MongArr
 =======
-Mongo syntax for pirates at heart. MongArr provides methods for finding sub-selections within an array, sorting using MongoDB sytax, or sub-selecting object property values in a a way that is similar to MongoDB. It aim's to be compatible with all MongoDB syntax, but goes overboard on allowing you to do more fun/elegant things if you wish.
+Mongo syntax for pirates at heart. MongArr provides methods for finding sub-selections within an array, sorting using MongoDB snytax, or sub-selecting object property values in a a way that is similar to MongoDB. It aim's to be compatible with all MongoDB syntax, but goes overboard on allowing you to do more fun/elegant things if you wish.
 
 MongArr allows...
 -----------------
