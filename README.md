@@ -50,7 +50,7 @@ Not decided. I will *probably* release under a permissive BSD or MIT, but I have
 
 1. You ARE free to use this software, directly or indirectly, for non-commercial purposes of any kind.
 2. You ARE free to use this software, directly or indirectly, for educational purposes of any kind, under the condition such activitity does not directly result in economic gain.
-3. You ARE NOT free to use, directly or indirectly, this softwae of commercial purposess of any kind without expressed written permission from the copyright owner.
+3. You ARE NOT free to use, directly or indirectly, this software for commercial purposess of any kind without expressed written permission from the copyright owner.
 4. You may copy this software, make changes, and redistrubte this software, under the conditions that this license statement, the copyright statement, as well as all modified and all unmodifed source code is included.
 5. If you believe that any part of this license is ambiguous to any specific purpose, you are REQUIRED to contact the copyright holder for clarification before proceeding with use.
 
