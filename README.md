@@ -53,5 +53,6 @@ Not decided. I will *probably* release under a permissive BSD or MIT, but I have
 3. You ARE NOT free to use, directly or indirectly, this software for commercial purposess of any kind without expressed written permission from the copyright owner.
 4. You may copy this software, make changes, and redistrubte this software, under the conditions that this license statement, the copyright statement, as well as all modified and all unmodifed source code is included.
 5. If you believe that any part of this license is ambiguous to any specific purpose, you are REQUIRED to contact the copyright holder for clarification before proceeding with use.
+6. There is no expressed or implied warrenty for this software of any kind. The copyright holder is not liable for any damages, tangible or intangible, that may result in the direct, indirect, or assumed use of this software. The implementor, operator, agent, and/or user of this software assumes all risk and liability.
 
 Copyright (C) 2013 G. T. Stobbe <mr.stobbe@gmail.com>. All Rights Reserved.
