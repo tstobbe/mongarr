@@ -2,8 +2,18 @@
 	"name": "mongarr",
 	"main": "./mongarr.js",
 	"version": "1.0.0-alpha.1",
+	"author": {
+			"name": "Tyler Stobbe",
+			"email": "mr.stobbe@gmail.com"
+		},
 	"license": "Apache-2.0",
 	"description": "Mongo-esque querying/sorting of arrays, and other sugary sweats.",
-	"keywords": [ "array", "query", "select", "sort", "mongo", "mongodb" ]
+	"keywords": [ "array", "query", "select", "sort", "join", "group", "mongo", "mongodb" ],
+	"devDependencies": {
+			"nodeunit": "0.x"
+		},
+	"scripts": {
+			"test": "$(which nodeunit || echo node_modules/nodeunit/bin/nodeunit) tests/"
+		}
 }
 
