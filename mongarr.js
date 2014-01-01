@@ -2,6 +2,7 @@ var select = require('./lib/select.js');
 var matches = require('./lib/matches.js');
 var find = require('./lib/find.js');
 var sort = require('./lib/sort.js');
+var group = require('./lib/group.js');
 
 var marr = module.exports = { };
 
@@ -10,6 +11,7 @@ marr.findOne = find.findOne;
 marr.matches = matches;
 marr.select = select;
 marr.sort = sort;
+marr.group = group;
 
 
 marr.extendPrototypes = function() {
@@ -27,6 +29,7 @@ marr.extendPrototypes = function() {
 			Array.prototype.find = extendWith(marr.find);
 			Array.prototype.findOne = extendWith(marr.findOne);
 			Array.prototype.sort = extendWith(marr.sort);
+			Array.prototype.group = extendWith(marr.group);
 		} else if ((arguments[i] === Object) || (arguments[i] === 'object')) {
 			Object.prototype.matches = extendWith(marr.matches);
 			Object.prototype.select = extendWith(marr.select);
