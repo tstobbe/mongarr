@@ -14,10 +14,16 @@
  limitations under the License.
 
 \***************************************************************************/
+(function() {
 
-var undef = undefined;
+var undef = void 0;
 
-var marr = module.exports = { };
+var marr = { };
+if (this.process !== undef) {
+	module.exports = marr;
+} else {
+	this.marr = marr;
+}
 
 var select = marr.select = function(ns, key/*, options */) {
 	var opts = arguments[2] || { };
@@ -561,3 +567,4 @@ marr.extendPrototypes = function() {
 	return marr;
 };
 
+})();
