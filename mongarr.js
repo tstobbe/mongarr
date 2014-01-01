@@ -3,6 +3,7 @@ var matches = require('./lib/matches.js');
 var find = require('./lib/find.js');
 var sort = require('./lib/sort.js');
 var group = require('./lib/group.js');
+var join = require('./lib/join.js');
 
 var marr = module.exports = { };
 
@@ -12,7 +13,7 @@ marr.matches = matches;
 marr.select = select;
 marr.sort = sort;
 marr.group = group;
-
+marr.join = join;
 
 marr.extendPrototypes = function() {
 	function extendWith(fn) {
@@ -30,11 +31,12 @@ marr.extendPrototypes = function() {
 			Array.prototype.findOne = extendWith(marr.findOne);
 			Array.prototype.sort = extendWith(marr.sort);
 			Array.prototype.group = extendWith(marr.group);
+			Array.prototype.join = extendWith(marr.join);
 		} else if ((arguments[i] === Object) || (arguments[i] === 'object')) {
 			Object.prototype.matches = extendWith(marr.matches);
 			Object.prototype.select = extendWith(marr.select);
 		} else {
-			throw Error('Can\'t extend prototype of unknown type "' + arguments[i] + '"');
+			throw Error('Can\'t extend prototype of unsupported type "' + arguments[i] + '"');
 		}
 	}
 	return marr;
