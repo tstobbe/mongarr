@@ -25,7 +25,7 @@ var products = [
 ];
 
 var related1To1 = [
-	{ _id: 20, productID: 1, descr: 'Some Keyboard' },
+	{ _id: 20, productID: 1, descr: 'Some Keyboard', disabled: true },
 	{ _id: 21, productID: 2, descr: 'Some Monitor' },
 	{ _id: 22, productID: 3, descr: 'Some Mouse' }
 ];
@@ -37,7 +37,7 @@ tests.joinOriginal = function(test) {
 };
 
 tests.joinRootRightRoot = function(test) {
-	var res = products.join(related1To1, { _id: 'productID' });
+	var res = products.join(related1To1, { productID: '$._id' });
 	test.strictEqual(res.length, 3);
 	test.strictEqual(res[0]._id, 1);
 	test.strictEqual(res[1]._id, 2);
@@ -48,5 +48,39 @@ tests.joinRootRightRoot = function(test) {
 	test.strictEqual(res[0].descr, 'Some Keyboard');
 	test.strictEqual(res[1].descr, 'Some Monitor');
 	test.strictEqual(res[2].descr, 'Some Mouse');
+	test.done();
+};
+
+tests.findAndJoinRootRightRoot = function(test) {
+	var res = products.find({ disabled: true }).join(related1To1, { productID: '$._id' });
+	test.strictEqual(res.length, 1);
+	test.strictEqual(res[0]._id, 2);
+	test.strictEqual(res[0].productID, 2);
+	test.strictEqual(res[0].descr, 'Some Monitor');
+	test.done();
+};
+
+tests.findAndFindJoinRootRightRoot = function(test) {
+	var res = products.find({ disabled: { $ne: true } }).join(related1To1, { productID: '$._id', disabled: { $ne: true } });
+	test.strictEqual(res.length, 1);
+	test.strictEqual(res[0]._id, 3);
+	test.strictEqual(res[0].productID, 3);
+	test.strictEqual(res[0].descr, 'Some Mouse');
+	test.done();
+};
+
+tests.findWithJoin = function(test) {
+	var res = products.find(
+			{ disabled: { $ne: true } },
+			null,
+			{ $join: {
+					$with: related1To1,
+					$where: { productID: '$._id', disabled: { $ne: true } }
+				} }
+		);
+	test.strictEqual(res.length, 1);
+	test.strictEqual(res[0]._id, 3);
+	test.strictEqual(res[0].productID, 3);
+	test.strictEqual(res[0].descr, 'Some Mouse');
 	test.done();
 };
