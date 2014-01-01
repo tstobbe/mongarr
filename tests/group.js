@@ -93,3 +93,17 @@ tests.sparseSubArrayGrouping = function(test) {
 	test.strictEqual(res['universe'][0]._id, 3);
 	test.done();
 };
+
+tests.defaultedSparseGroupingViaOptions = function(test) {
+	var res = products.group('disabled', { $default: '' });
+	var keys = Object.keys(res);
+	test.strictEqual(keys.length, 2);
+	test.strictEqual(keys[0], '');
+	test.strictEqual(keys[1], true.toString());
+	test.strictEqual(res[''].length, 2);
+	test.strictEqual(res[''][0]._id, 1);
+	test.strictEqual(res[''][1]._id, 3);
+	test.strictEqual(res[true].length, 1);
+	test.strictEqual(res[true][0]._id, 2);
+	test.done();
+};
