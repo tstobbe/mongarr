@@ -41,18 +41,21 @@ Yes... it works (and currently *only* works because of packaging) in node. I'll 
 
 Browsers
 --------
-There's nothing stopping it from it working in browsers. I just need to as some stuff to build it into a nice and neat browser package. If you really want, you can do it manually by stripping out the `requrire()` statements, properly namespacing stuff, and combining/minifying everything.
+There's probably nothing stopping it from it working in browsers. I just need to as some stuff to build it into a nice and neat browser package. If you really want, you can do it manually by stripping out the `require()` statements, properly namespacing stuff, and combining/minifying everything.
 
 
 License
 -------
-Not decided. I will *probably* release under a permissive BSD or MIT, but I haven't decided. For now, the licensing terms of use are:
+Copyright (C) 2013 G. T. Stobbe <mr.stobbe@gmail.com>
 
-1. You ARE free to use this software, directly or indirectly, for non-commercial purposes of any kind.
-2. You ARE free to use this software, directly or indirectly, for educational purposes of any kind, under the condition such activitity does not directly result in economic gain.
-3. You ARE NOT free to use, directly or indirectly, this software for commercial purposess of any kind without expressed written permission from the copyright owner.
-4. You may copy this software, make changes, and redistrubte this software, under the conditions that this license statement, the copyright statement, as well as all modified and all unmodifed source code is included.
-5. If you believe that any part of this license is ambiguous to any specific purpose, you are REQUIRED to contact the copyright holder for clarification before proceeding with use.
-6. There is no expressed or implied warrenty for this software of any kind. The copyright holder is not liable for any damages, tangible or intangible, that may result in the direct, indirect, or assumed use of this software. The implementor, operator, agent, and/or user of this software assumes all risk and liability.
+Licensed under the Apache License, Version 2.0 (the "License");
+you may not use this file except in compliance with the License.
+You may obtain a copy of the License at
 
-Copyright (C) 2013 G. T. Stobbe <mr.stobbe@gmail.com>. All Rights Reserved.
+    http://www.apache.org/licenses/LICENSE-2.0
+
+Unless required by applicable law or agreed to in writing, software
+distributed under the License is distributed on an "AS IS" BASIS,
+WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+See the License for the specific language governing permissions and
+limitations under the License.
